@@ -24,13 +24,13 @@ You should get the localhost and see the site so far
 
 ## Structure
 
-![Alt text](images/image.png)
+<center><img src="images/image.png"></center>
 
 - `node_modules`: 3rd party libraries (like react n stuff) are installed. **dont need to touch this**
 - `public`: public assets of website(images/images/videos)
 - `src`: source code of application. It has `App.tsx` as the main thingy. It is the only component so far
 
-![Alt text](images/image-1.png)
+<center><img src="images/image-1.png"></center>
 
 - `index.html` is a vanilla HTML page:
 
