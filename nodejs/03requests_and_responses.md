@@ -112,6 +112,7 @@ const server = http.createServer((req,res)=>{
 And you get:
 
 ![Alt text](images/image-9.png) 
+
 Notice the HTML is coming after you inspect it too<br>
 It automatically added `<html>`, `<head>` and `<body>` tags
 
