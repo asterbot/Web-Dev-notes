@@ -158,7 +158,8 @@ Put the HTML file in a directory called `view` and create `index.html`:
 </html>
 ```
 
-We need to require the module `fs` for this to work since we are now dealing with a separate file
+We need to require the module `fs` for this to work since we are now dealing with a separate file<br>
+All we do is read the file and send the data read to the browser via `res` object
 
 ```js
 const http=require('http');
@@ -177,7 +178,7 @@ const server = http.createServer((req,res)=>{
             res.end();
         }
         else{
-            res.write(data);
+            res.write(data); //(1)
             res.end();
         }
     })
@@ -190,3 +191,156 @@ server.listen(3000, 'localhost', ()=>{
 ```
 
 Put `res.end()` in both cases to ensure that the response is ended either way
+
+Also, we don't need to put `res.write(data)` if it's the only thing we're writing. We can equivalently change **(1)** to:
+```js
+else{
+    res.end(data);
+}
+```
+
+
+## Basic Routing
+Currently our web page looks the same despite the URL just as long as it begins with `localhost:3000`, for example it accepts `localhost:3000/about`, `localhost:3000/blogs` etc
+
+We need to make it possible to route and switch between HTML pages depending on the URL
+
+In the view directory create two new HTML pages:
+
+**about.html**: (this should be sent for `localhost:3000/about`)
+```html
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEBSITE WOOHOOO</title>
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+       <h1>About</h1>
+
+       <p>So...about this website...idk</p>
+    </body>
+</html>
+```
+
+**404.html**:(this is to be loaded for any invalid routes)
+```html
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEBSITE WOOHOOO</title>
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+       <h1>404</h1>
+
+       <p>this page doesn't exist sowwy</p>
+    </body>
+</html>
+```
+
+We can access the path using `req.url`<br>
+To generate the path of file *we* need to access we must do some case-work, and replace the path variable accordingly
+```js
+//...
+let path = './views/';
+switch(req.url){
+    case '/':       // home page
+        path+='index.html'
+        break;
+    case '/about':  // about page
+        path+='about.html'
+        break;
+    default:        // none of them; ie. error
+        path+='404.html'
+        break;
+}
+
+// Read the HTML file
+fs.readFile(path, (err,data)=>{
+    if(err){
+        console.log(err);
+        res.end();
+    }
+    else{
+        res.end(data);
+    }
+})
+//...
+```
+
+## Status Codes
+
+Status codes are the types of responses being sent to the browser about how successful the response was
+
+Common response codes:
+- 200: OK
+- 301: Resource moved
+- 404: Not found
+- 500: Internal Server Error
+
+There are loads more, but there are one of these ranges:
+- 100 range: Informational responses
+- 200 range: Success codes
+- 300 range: Codes for redirects
+- 400 range: User/client error codes
+- 500 range: Server error codes
+
+
+Let's add status codes to our responses, when we are checking the URL:
+
+```js
+//...
+let path = './views/';
+switch(req.url){
+    case '/':
+        path+='index.html'
+        res.statusCode=200;
+        break;
+    case '/about':
+        path+='about.html'
+        res.statusCode=200;
+        break;
+    default:
+        path+='404.html'
+        res.statusCode=404;
+        break;
+}
+//...
+
+```
+
+These status codes are received by the browser and can be checked via inspect element
+
+| Success(200) | Failure(404) |
+| ---- | ---- |
+|![Alt text](images/image-10.png) | ![Alt text](images/image-11.png) |
+
+
+## Redirects
+
+Suppose `localhost:3000/about` was previously called `localhost:3000/about-me` and we need to redirect all traffic from `../about-me` to `../about`
+
+How do we do it?<br>
+We will firstly set the status code to 301 (resource moved) and set a new response header for redirection:
+
+```js
+let path = './views/';
+    switch(req.url){
+        //...
+        case '/about':
+            path+='about.html'
+            res.statusCode=200;
+            break;
+        case '/about-me':
+            res.statusCode=301;
+            res.setHeader('Location','/about'); //redirect to /about
+            res.end();
+            break;
+        //...
+    }
+```
+
+Writing so many switch cases for very large web applications can be tedious to maintain - a third party app express helps with doing this in a more elegant way.
