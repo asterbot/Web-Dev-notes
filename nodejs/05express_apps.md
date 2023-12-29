@@ -115,11 +115,15 @@ Now we can add hyperlinks in the HTML pages to navigate between them. Something 
 
 When we did redirects in vanilla node, we just create a new case:
 ```js
-case '/about-us':
-    res.statusCode=301;
-    res.setHeader('Location','/about');
-    res.end();
-    break;
+switch(req.url){
+    //...
+    case '/about-us':
+        res.statusCode=301;
+        res.setHeader('Location','/about');
+        res.end();
+        break;
+    //...
+}
 ```
 With expess, we can do:
 ```js
