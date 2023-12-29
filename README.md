@@ -22,4 +22,8 @@
 | [View Engines](nodejs/06view_engines.md) | View engines(at a glance), ejs view engine, passing data into views, partials, adding css |
 | [Middleware](nodejs/07middleware.md) | What is middleware? Using next(), 3rd party middleware, static files |
 
+
+## MERN
+[MERN Stack video playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE)
+
 ## WebSockets
