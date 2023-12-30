@@ -21,6 +21,7 @@
 | [Express apps](nodejs/05express_apps.md) | What is express, making an express app, routing & HTML pages, redirects & 404 pages |
 | [View Engines](nodejs/06view_engines.md) | View engines(at a glance), ejs view engine, passing data into views, partials, adding css |
 | [Middleware](nodejs/07middleware.md) | What is middleware? Using next(), 3rd party middleware, static files |
+| [MongoDB](nodejs/08mongodb.md) | Intro to MongoDB, Setup with atlas, Mongoose, Getting & Saving data, Outputting documents in view | 
 
 
 ## MERN

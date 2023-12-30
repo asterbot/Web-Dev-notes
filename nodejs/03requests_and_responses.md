@@ -141,7 +141,7 @@ And it replaces the default one for us
 Returning line-by-line HTML is clunky<br>
 Would prefer to return entire HTML file
 
-Put the HTML file in a directory called `view` and create `index.html`:
+Put the HTML file in a directory called `views` and create `index.html`:
 ```html
 <html>
     <head>

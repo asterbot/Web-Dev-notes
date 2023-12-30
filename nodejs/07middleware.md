@@ -196,3 +196,103 @@ In this case the second middleware will NOT fire, since we send a response at (1
 
 
 ## 3rd party middleware
+We will use a middleware called "morgan" to log stuff to the console, since it is better than what we have:
+```js
+app.use((req,res,next)=>{
+    console.log('New request made');
+    console.log('Host:', req.hostname);
+    console.log('Path:', req.path);
+    console.log('Method:',req.method);
+    next();
+});
+```
+
+According to documentation, after requiring it we need to call the function with a parameter like this:
+```js
+morgan('tiny')
+```
+which tells *how the log is to be formatted*
+
+Can replace the `app.use` code we currently have with this:
+```js
+const morgan = require('morgan');
+
+//...
+
+app.use(morgan('dev'));
+//...
+```
+
+Since `app.use` takes in a function, instead of writing our own arrow function we will use the function we required
+
+```
+GET / 304 7.818 ms - -
+GET / 304 1.512 ms - -
+GET /about 304 2.515 ms - -
+GET /about 304 1.274 ms - -
+```
+
+You can use different options such as `morgan('tiny')` and find out what they do through documentation
+
+## Static Files
+With our current implementation, we would not be able to access static files
+
+For example, create `style.css` in the current directory:
+```css
+body{
+    background:black;
+}
+``` 
+
+This 
+- can't be accessed on the browser doing `localhost:3000/styles.css`
+- can't be accessed by any of the HTML(EJS) files
+
+We need to provide which files are to be allowed publicly accessible and which ones are *not*
+
+This is done using the **static middleware**
+
+To do this, we do:
+```js
+const express = require('express');
+const morgan = require('morgan');
+
+// express app
+const app = express();
+
+// register view engine
+app.set('view engine', 'ejs');
+
+// listen for requests
+app.listen(3000);
+
+// middleware & static files
+app.use(express.static('public'));
+
+// (rest of the code)
+```
+
+All this does is looks for a directory named `public` and allows public access for those for any files on the front-end
+
+So in `header.ejs` we can add this line in the header:
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+And now the background color is black :D (this looks so ugly)
+
+Notice how we didn't say `public/styles.css` since it automatically looks in the public folder because of our js code above
+
+Also now we can do `localhost:3000/styles.css` and we can see it on the browser since its public
+
+Now we can move all the css in the css file instead of a `<style>` tag
+
+Now `header.ejs` is much more simple:
+```html
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE WOOHOOO | <%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+```

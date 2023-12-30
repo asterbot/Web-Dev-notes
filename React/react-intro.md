@@ -2,7 +2,7 @@
 
 ## Creating the react app
 
-First create the `vite` ap  p:
+First create the `vite` app:
 
 ```bash
 npm create vite@latest
