@@ -547,7 +547,7 @@ return(
     );
 ```
 
-So we see:
+So we see:<br>
 ![Alt text](images/image-5.png)
 
 We can represent the browser event with a parameter by doing:
@@ -560,7 +560,7 @@ We can represent the browser event with a parameter by doing:
      </ul>
 ```
 
-and in the console we get this upon clicking
+and in the console we get this upon clicking<br>
 ![Alt text](images/image-6.png)
 
 This shows many properties like <br>
@@ -633,7 +633,7 @@ function ListGroup(){
 export default ListGroup;
 ```
 
-This doesn't work
+This doesn't work<br>
 This is because the variable `selectedIndex` is local to *this* component and React is not aware of it, so it is not updating the virtual DOM<br>
 So we need to tell react that this component may change its state over time using `useState`<br>
 It is a hook(more specifically, a state hook) that informs react that this component has data which will change over time
