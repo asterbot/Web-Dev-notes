@@ -36,7 +36,9 @@
 | [Express Setup](MERN/02express_setup.md) | Basic Express Setup, Setup middleware|
 | [Router & API routes](MERN/03router_and_APIroutes.md) | Setting up the routers and API routes | 
 | [Establishing database connection](MERN/04mongodb.md) | Establishing mongodb connection, defining schema and model
-| [Controllers](MERN/05controllers.md) | Creating controllers, adding functionalities
+| [Controllers](MERN/05controllers.md) | Creating controllers, adding functionalities|
+| [React App](MERN/06react_app.md) | Creating the React app, Routing, Navbar component|
+| [Fetching Data](MERN/07fetching_data.md) | Setting up hooks, fetching data from API routes, Rendering workout details
 
 ## WebSockets
 [Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime)
