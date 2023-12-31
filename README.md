@@ -35,7 +35,8 @@
 | [Intro to MERN](MERN/01intro.md) | Intro |
 | [Express Setup](MERN/02express_setup.md) | Basic Express Setup, Setup middleware|
 | [Router & API routes](MERN/03router_and_APIroutes.md) | Setting up the routers and API routes | 
-| [Establishing database connection](MERN/04mongodb.md) | 
+| [Establishing database connection](MERN/04mongodb.md) | Establishing mongodb connection, defining schema and model
+| [Controllers](MERN/05controllers.md) | Creating controllers, adding functionalities
 
 ## WebSockets
 [Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime)
