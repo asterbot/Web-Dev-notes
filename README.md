@@ -4,6 +4,8 @@
 
 [React video tutorial followed](https://www.youtube.com/watch?v=SqcY0GlETPk)
 
+[Maybe another one I can try](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
+
 | Title | Topics Covered|
 | -- | ----- |
 | [React intro with typescript](React/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State, Hooks, Props
@@ -28,6 +30,12 @@
 
 ## MERN
 [MERN Stack video playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE)
+|Title | Topics Covered|
+| -- | -----|
+| [Intro to MERN](MERN/01intro.md) | Intro |
+| [Express Setup](MERN/02express_setup.md) | Basic Express Setup, Setup middleware|
+| [Router & API routes](MERN/03router_and_APIroutes.md) | Setting up the routers and API routes | 
+| [Establishing database connection](MERN/04mongodb.md) | 
 
 ## WebSockets
 [Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime)
