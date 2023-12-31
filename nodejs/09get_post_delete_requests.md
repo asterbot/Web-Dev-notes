@@ -20,7 +20,7 @@ Examples of requests:
 | localhost:3000/blogs/:id | DELETE | Deletes blog with corresponding ID
 | localhost:3000/blogs/:id | PUT | Update blog with corresponding ID|
 
-We have already doene the GET requests(we aren't doing PUT requests yet)
+We have already doene the GET requests in previous code(we aren't doing PUT requests yet)
 
 ## POST Request
 
@@ -98,15 +98,6 @@ app.post('/blogs', (req,res)=>{
 });
 ```
 and redirect to the home(all blogs) page
-
-| URL | Request type | Description|
-| --- | ------------ | -----------|
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>GET</td><td>Displays the blogs on the browser</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/create</td><td>GET</td><td>Displays the web form for creating new blogs</td></tr> | 
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>POST</td><td>When a new blog is created, this request is sent to create it in the database</td></tr> |
-| localhost:3000/blogs/:id | GET | Gets blog with the corresponding ID|
-| localhost:3000/blogs/:id | DELETE | Deletes blog with corresponding ID
-| localhost:3000/blogs/:id | PUT | Update blog with corresponding ID|
 
 ## Route parameters
 
@@ -199,16 +190,6 @@ Now we can make a new `details.ejs` page in views:
 </html>
 ```
 All this does it renders the title and body based on the blog it receives (which it will upon the get request after the `<a>` tag in index.ejs)
-
-Progress:
-| URL | Request type | Description|
-| --- | ------------ | -----------|
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>GET</td><td>Displays the blogs on the browser</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/create</td><td>GET</td><td>Displays the web form for creating new blogs</td></tr> | 
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>POST</td><td>When a new blog is created, this request is sent to create it in the database</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/:id</td><td>GET</td><td>Gets blog with the corresponding ID</td></tr> |
-| localhost:3000/blogs/:id | DELETE | Deletes blog with corresponding ID
-| localhost:3000/blogs/:id | PUT | Update blog with corresponding ID|
 
 
 ## Delete requests
@@ -343,14 +324,3 @@ Now we can just in the case change it to actually redirect
 ```
 
 > A bit of JS: the `data` parameter in the second promise catch is the same as the `response.json()` returned by the first promise catch. It is finding the data of its own promise, and whatever is returned once the function is complete
-
-| URL | Request type | Description|
-| --- | ------------ | -----------|
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>GET</td><td>Displays the blogs on the browser</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/create</td><td>GET</td><td>Displays the web form for creating new blogs</td></tr> | 
-| <tr style="background-color: green;"><td>localhost:3000/blogs</td><td>POST</td><td>When a new blog is created, this request is sent to create it in the database</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/:id</td><td>GET</td><td>Gets blog with the corresponding ID</td></tr> |
-| <tr style="background-color: green;"><td>localhost:3000/blogs/:id</td><td>DELETE</td><td>Deletes blog with corresponding ID</td></tr> |
-| localhost:3000/blogs/:id | PUT | Update blog with corresponding ID|
-
-No PUT in this lesson :O
