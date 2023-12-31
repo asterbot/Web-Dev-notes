@@ -22,7 +22,8 @@
 | [View Engines](nodejs/06view_engines.md) | View engines(at a glance), ejs view engine, passing data into views, partials, adding css |
 | [Middleware](nodejs/07middleware.md) | What is middleware? Using next(), 3rd party middleware, static files |
 | [MongoDB](nodejs/08mongodb.md) | Intro to MongoDB, Setup with atlas, Mongoose, Getting & Saving data, Outputting documents in view | 
-| [Get, Post & Delete Requests](nodejs/09get_post_delete_requests.md) | Request types, Post requests, Route parameters, Delete requests
+| [Get, Post & Delete Requests](nodejs/09get_post_delete_requests.md) | Request types, Post requests, Route parameters, Delete requests|
+| [Express Router & MVC](nodejs/10express_router_mvc.md) | Express Router, MVC Basics, Controllers |
 
 
 ## MERN
