@@ -147,3 +147,53 @@ const response = await fetch('/api/workouts');
 Now the react app renders the data correctly!
 
 ## Rendering workout details
+
+Instead of just outputting the title of the workout we will now make a template render more about the workout
+
+Create a new component:
+
+**WorkoutDetails.js:**
+```js
+const WorkoutDetails = ({ workout })=>{
+    return(
+        <div className="workout-details">
+            <h4>{workout.title}</h4>
+            <p><strong>Load(kg):</strong> {workout.load}</p>
+            <p><strong>Reps:</strong> {workout.reps}</p>
+            <p>{workout.createdAt}</p>
+        </div>
+    )
+}
+
+export default WorkoutDetails;
+```
+
+And modify **Home.js:**
+
+```js
+// Components
+import WorkoutDetails from '../components/WorkoutDetails';
+
+const Home = ()=>{
+
+    //useEffect and State hooks
+    //...
+
+    return(
+        <div className = "home">
+            <div className="Workouts">
+                {workouts && workouts.map((workout)=>(
+                    <WorkoutDetails key={workout._id} workout={workout} />
+                ))}    
+            </div>
+        </div>
+    )
+}
+
+export default Home;
+```
+
+*some CSS later* this looks good:
+
+![](images/image.png)
+
