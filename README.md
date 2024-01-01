@@ -2,17 +2,17 @@
 
 ## React
 
-[React video tutorial followed](https://www.youtube.com/watch?v=SqcY0GlETPk)
-
-[Maybe another one I can try](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
+[React video tutorial followed](https://www.youtube.com/watch?v=SqcY0GlETPk) - Programming with Mosh
 
 | Title | Topics Covered|
 | -- | ----- |
 | [React intro with typescript](React/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State, Hooks, Props
 
+[React playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) - Net Ninja
+
 ## Nodejs
 
-[Node Js playlist video tutorial followed](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+[Node Js playlist video tutorial followed](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU) - Net Ninja
 |Title | Topics Covered|
 | -- | ------|
 | [Node.js intro](nodejs/00nodejs_intro.md) | Computer & code, Role of node.js, running js files using node
@@ -29,7 +29,7 @@
 
 
 ## MERN
-[MERN Stack video playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE)
+[MERN Stack video playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE) - Net Ninja
 |Title | Topics Covered|
 | -- | -----|
 | [Intro to MERN](MERN/01intro.md) | Intro |
@@ -38,7 +38,10 @@
 | [Establishing database connection](MERN/04mongodb.md) | Establishing mongodb connection, defining schema and model
 | [Controllers](MERN/05controllers.md) | Creating controllers, adding functionalities|
 | [React App](MERN/06react_app.md) | Creating the React app, Routing, Navbar component|
-| [Fetching Data](MERN/07fetching_data.md) | Setting up hooks, fetching data from API routes, Rendering workout details
+| [Fetching Data](MERN/07fetching_data.md) | Setting up hooks, fetching data from API routes, Rendering workout details|
+|[New Workout Form](MERN/08new_workout_form.md) | Adding react form and POSTing to database|
+| [Adding React Context](MERN/09adding_react_context.md) | -|
 
-## WebSockets
-[Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime)
+
+<!-- ## WebSockets
+[Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime) -->
