@@ -40,8 +40,8 @@
 | [React App](MERN/06react_app.md) | Creating the React app, Routing, Navbar component|
 | [Fetching Data](MERN/07fetching_data.md) | useEffect hook,Setting up hooks, fetching data from API routes, Rendering workout details|
 |[New Workout Form](MERN/08new_workout_form.md) | Adding react form and POSTing to database|
-| [Adding React Context](MERN/09adding_react_context.md) | React context |
-
+| [Adding React Context](MERN/09adding_react_context.md) | React context, useReducer hook, writing our own hook |
+| [Deleting Data](MERN/10deleting_data.md) | ... |
 
 <!-- ## WebSockets
 [Video tutorial](https://www.youtube.com/watch?v=4Uwq0xB30JE&ab_channel=AblyRealtime) -->

@@ -284,3 +284,84 @@ We will instead use the hook we just created
 
 Now we can get the context value using the hook and de-structure it to get the value and update it accordingly
 
+**Home.js**:
+```js
+import { useEffect } from 'react'
+import { useWorkoutContext } from '../hooks/useWorkoutsContext';
+
+// Components
+import WorkoutDetails from '../components/WorkoutDetails';
+import WorkoutForm from '../components/WorkoutForm';
+
+const Home = ()=>{
+    const { workouts, dispatch } = useWorkoutContext();
+
+
+    useEffect(()=>{
+        const fetchWorkouts = async ()=>{
+            const response = await fetch('/api/workouts');
+            const json = await response.json();
+
+            if (response.ok){
+                dispatch({type: 'SET_WORKOUTS', payload: json})
+            }
+        }
+
+        fetchWorkouts();
+    }, [dispatch]);
+
+    return(
+        <div className = "home">
+            <div className="Workouts">
+                {workouts && workouts.map((workout)=>(
+                    <WorkoutDetails key={workout._id} workout={workout} />
+                ))}    
+            </div>
+            <WorkoutForm />
+        </div>
+    )
+}
+
+export default Home;
+```
+
+Now all we need to do is make sure the dispatch function is called and the workouts are updated when we submit the form- ie. update the global context state. That way we're updating the UI in sync with the database
+
+So let's go to **WorkoutForm.js** and add:
+
+```js
+const WorkoutForm = () =>{
+    const { dispatch } = useWorkoutContext();
+
+    // other state hooks
+
+    const handleSubmit = async (event)=>{
+        event.preventDefault(); // to prevent the default action of form submission: refresh
+    
+        const workout = {title,load,reps};
+
+        const response = await fetch('/api/workouts', {
+            method: 'POST',
+            body: JSON.stringify(workout), //changes workout to JSON string
+            headers : {
+                'Content-Type': 'application/json',
+            }
+        })
+        const json = await response.json();
+
+        if (!response.ok){
+            setError(json.error);
+        }
+        else{
+            // reset everything - response is ok
+            dispatch({type: 'CREATE_WORKOUT', payload: json})
+        }
+    }
+
+    return(
+        // template to return
+    )
+}
+```
+
+Now the UI is in sync with the database because of the context!
