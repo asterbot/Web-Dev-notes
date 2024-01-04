@@ -29,10 +29,10 @@ The cloud server is called **Cloud Server Atlas**
 To create a new cluster, go to https://www.mongodb.com/cloud/atlas/ and create a new database
 
 ### Add data and collections
-Once set up with a password(for this tutorial i've set the pwd `test12345`) then add data and set collection name to blogs (cuz)
+Once set up with a password(for this tutorial i've set the pwd `[pwd]`) then add data and set collection name to blogs (cuz)
 
 ### Add users
-Then go to database access- add a new user and give a password(i've again set `test12345`) and give read/write permission to database
+Then go to database access- add a new user and give a password(i've again set `[pwd]`) and give read/write permission to database
 
 ### Connect
 Press connect -> Drivers -> Follow the instructions and copy the connection string
@@ -47,7 +47,7 @@ const morgan = require('morgan');
 const app = express();
 
 // connect to mongodb
-const db_URI = 'mongodb+srv://asterbot:test12345@nodetrial.cbdbupi.mongodb.net/?retryWrites=true&w=majority';
+const db_URI = 'mongodb+srv://[name]:[pwd]@nodetrial.cbdbupi.mongodb.net/?retryWrites=true&w=majority';
 
 // (rest of the code)...
 ```
@@ -91,7 +91,7 @@ So it should look something like this:
 const mongoose = require('mongoose');
 
 // connect to mongodb
-const db_URI = 'mongodb+srv://asterbot:test12345@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const db_URI = 'mongodb+srv://[name]:[pwd]@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
 mongoose.connect(db_URI);
 ```
 
@@ -127,7 +127,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-const db_URI = 'mongodb+srv://asterbot:test12345@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const db_URI = 'mongodb+srv://[name]:[pwd]@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
 mongoose.connect(db_URI)
     .then((result)=> app.listen(3000)) //listen for requests if connection is established
     .catch((err) => console.log(err))
@@ -330,7 +330,7 @@ const Blog = require('./models/blog')
 const app = express();
 
 // connect to mongodb
-const db_URI = 'mongodb+srv://asterbot:test12345@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const db_URI = 'mongodb+srv://[name]:[pwd]@nodetrial.cbdbupi.mongodb.net/node-tuts?retryWrites=true&w=majority';
 mongoose.connect(db_URI)
     .then((result)=> app.listen(3000)) //listen for requests if connection is established
     .catch((err) => console.log(err))
