@@ -6,7 +6,7 @@
 
 | Title | Topics Covered|
 | -- | ----- |
-| [React intro with typescript](React/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State, Hooks, Props
+| [React intro with typescript](React/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State Hooks, Props
 
 [React playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) - Net Ninja
 
@@ -38,9 +38,9 @@
 | [Establishing database connection](MERN/04mongodb.md) | Establishing mongodb connection, defining schema and model
 | [Controllers](MERN/05controllers.md) | Creating controllers, adding functionalities|
 | [React App](MERN/06react_app.md) | Creating the React app, Routing, Navbar component|
-| [Fetching Data](MERN/07fetching_data.md) | Setting up hooks, fetching data from API routes, Rendering workout details|
+| [Fetching Data](MERN/07fetching_data.md) | useEffect hook,Setting up hooks, fetching data from API routes, Rendering workout details|
 |[New Workout Form](MERN/08new_workout_form.md) | Adding react form and POSTing to database|
-| [Adding React Context](MERN/09adding_react_context.md) | -|
+| [Adding React Context](MERN/09adding_react_context.md) | React context |
 
 
 <!-- ## WebSockets
