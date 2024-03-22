@@ -6,9 +6,13 @@
 
 | Title | Topics Covered|
 | -- | ----- |
-| [React intro with typescript](React/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State Hooks, Props
+| [React intro with typescript](React/react-with-ts/react-intro.md) | Intro, Structure, Components, lists & conditional rendering , Events (click-events), State Hooks, Props
 
 [React playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) - Net Ninja
+
+|Title | Topics Covered|
+|--|-----|
+
 
 ## Nodejs
 

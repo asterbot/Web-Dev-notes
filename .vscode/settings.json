@@ -1,0 +1,5 @@
+{
+    "markdown.copyFiles.destination": {
+        "*.png": "${documentDirName}/images/${fileName}"
+    }
+}
