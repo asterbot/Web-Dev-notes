@@ -16,7 +16,10 @@
 | [Components](React/react-full/02_components.md) | Components, Templates, Dynamic values in templates, Component trees, CSS Styling |
 | [Click events and Functions](React/react-full/03_clickevents_functions.md) | Click events, calling functions on clicks, functions with parameters, etc. |
 | [Using state(useState hook)](React/react-full/04_using_state.md) | useState hook |
-| [Outputting Lists](React/react-full/05_output_lists.md) |  Map function to render lists nicely
+| [Outputting Lists](React/react-full/05_output_lists.md) |  Map function to render lists |
+| [Props](React/react-full/06_props.md) | Props, passing data to reusable components, passing functions as props, delete logic |
+| [useEffect hook](React/react-full/07_useEffect.md) | What the hook is, how to use dependencies, etc. |
+| [JSON Server](React/react-full/08_json_server.md) | Setting up JSON Server with API Endpoints, fetching data using useEffect, conditional loading messages, handling fetch errors
 
 
 ## Nodejs
