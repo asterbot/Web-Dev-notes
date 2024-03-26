@@ -20,7 +20,10 @@
 | [Props](React/react-full/06_props.md) | Props, passing data to reusable components, passing functions as props, delete logic |
 | [useEffect hook](React/react-full/07_useEffect.md) | What the hook is, how to use dependencies, etc. |
 | [JSON Server](React/react-full/08_json_server.md) | Setting up JSON Server with API Endpoints, fetching data using useEffect, conditional loading messages, handling fetch errors
-
+| [Custom Hooks](React/react-full/09_custom_hooks.md) | Setting up custom hook `useFetch` to fetch data from API to be re-used |
+| [The React Router](React/react-full/10_react_router.md) | How the react router works, installing, exact match routes, router links, useEffect cleanup and abort controller, route parameters, re-using custom hooks
+| [React forms](React/react-full/11_react_forms.md) | Creating a new form, updating state with form change, submit events, making a POST request to the API, programatic redirects upon submission to form |
+| 
 
 ## Nodejs
 
