@@ -23,7 +23,7 @@
 | [Custom Hooks](React/react-full/09_custom_hooks.md) | Setting up custom hook `useFetch` to fetch data from API to be re-used |
 | [The React Router](React/react-full/10_react_router.md) | How the react router works, installing, exact match routes, router links, useEffect cleanup and abort controller, route parameters, re-using custom hooks
 | [React forms](React/react-full/11_react_forms.md) | Creating a new form, updating state with form change, submit events, making a POST request to the API, programatic redirects upon submission to form |
-| 
+| [Deleting and 404 pages](React/react-full/12_deleting_and_404.md) | Deleting a blog with API request, showing 404 pages on invalid URL's |
 
 ## Nodejs
 
