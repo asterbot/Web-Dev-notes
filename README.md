@@ -12,7 +12,7 @@
 
 |Title | Topics Covered|
 |--|-----|
-| [React introduction](React/react-full/01react_intro.md) | What is react, project structure, setting up |
+| [React introduction](React/react-full/01_react_intro.md) | What is react, project structure, setting up |
 | [Components](React/react-full/02_components.md) | Components, Templates, Dynamic values in templates, Component trees, CSS Styling |
 | [Click events and Functions](React/react-full/03_clickevents_functions.md) | Click events, calling functions on clicks, functions with parameters, etc. |
 | [Using state(useState hook)](React/react-full/04_using_state.md) | useState hook |
